@@ -1,4 +1,4 @@
-Stars obtained: 33
+Stars obtained: 35
 Stars left to complete:
 - Code for Day 3
 - Day 7 *: Trees / Recursion
@@ -7,7 +7,6 @@ Stars left to complete:
 - Day 14 *: Regions
 - Day 18 *: Deadlock
 - Day 19 **: Tubes
-- Day 20 **: Particles 
 - Day 21 **: Fractal Art / Recursion
 - Day 23 **: Processing (Takes too long?)
 - Day 24 **: Graphs
