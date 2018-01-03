@@ -1,8 +1,7 @@
-Stars obtained: 37
+Stars obtained: 39
 Stars left to complete:
 - Code for Day 3
 - Day 7 *: Trees / Recursion
-- Day 9 **: Garbage / String Parsing
 - Day 11 *: Hex Distances
 - Day 14 *: Regions
 - Day 18 *: Deadlock
