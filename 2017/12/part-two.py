@@ -1,7 +1,6 @@
 lines = []
 group_to_value = {}
 num_groups = 0
-groups = []
 
 with open('input.txt') as inputfile:
     for line in inputfile:
