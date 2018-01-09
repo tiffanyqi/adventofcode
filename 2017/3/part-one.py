@@ -1,34 +1,38 @@
 """
-17  16  15  14  13
-18   5   4   3  12
-19   6   1   2  11
-20   7   8   9  10
-21  22  23---> ...
+37  35  34  33  32  31
+17  16  15  14  13  30
+18   5   4   3  12  29
+19   6   1   2  11  28
+20   7   8   9  10  27
+21  22  23  24  25  26 ...
 
-
-5 4 3
-6 1 2
-7 8 9
-
-
-1: 1-[0,0] 0
-2: 2-[0,1] 1
-3: 3-[0,1] 2
-   2-[1,1] 1
-   1-[1,0] 1
-4: 4-[0,0] 1
-5: 5-[0,0] 2
-   4-[1,0] 1
-   3-[2,0] 1
-   1-[1,1] 1
-   2-[1,2] 1
-6: 6-[0,1] 1
-7: 7-[0,2] 2
-8: 8-[1,2] 1
-9: 9-[2,2] 2
-10: 10-[3,2] 3 
+2, 10, 18
 """
+input = 325489
 
-# 325489
-def get_steps(steps):
-    return 0
+def get_northeast(steps):
+    difference = 2
+    count = 0
+    start = 1
+    while start < steps:
+    	start += difference
+	difference += 8
+	count += 1
+    # current position, total northeasts
+    return [start-difference+8, count]
+
+def get_northwest(steps):
+    difference = 4
+    start = 1
+    count = 0
+    while start < steps:
+        start += difference
+        difference += 8
+        count += 1
+    # current position, total northwests
+    return [start-difference+8, count]
+
+counts = get_northwest(input)[1]*2 - 2
+distance = input - get_northwest(input)[0]
+total = counts + counts - distance
+print total
