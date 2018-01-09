@@ -27,7 +27,6 @@ def redistribution_2():
             array[index] = array[index] + give
             remaining -= 1
 
-        print array
         for i, arr in enumerate(arrays):
             if arr[:] == [0, 14, 13, 12, 11, 10, 8, 8, 6, 6, 5, 3, 3, 2, 1, 10] and i != 4289:
                 print i

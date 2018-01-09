@@ -43,7 +43,6 @@ for iters in range(1000):
         if len(positions[p]) > 1:
             for r in positions[p]:
                 dictionary[r] = []
-                print 'collision! ' + str(r)
 
 total = 0
 for key in dictionary:

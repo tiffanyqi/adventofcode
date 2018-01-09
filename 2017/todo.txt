@@ -1,10 +1,33 @@
 Stars obtained: 40
 Stars left to complete:
 - Code for Day 3, Part 1
+- Code for Day 6, Part 1	
 - Day 7 *: Trees / Recursion
+- Code for Day 8, Part 1
+- Code for Day 10, Part 1
 - Day 11 *: Hex Distances
+- Code for Day 12, Part 1
+- Code for Day 16, Part 1
 - Day 18 *: Deadlock
 - Day 21 **: Fractal Art / Recursion
 - Day 23 **: Processing (Takes too long?)
 - Day 24 **: Graphs
 - Day 25 *: Turing Machine (Part 2??)
+
+Runtime to do:
+- Day 5, Part 2 (2-5 seconds)
+- Day 6, Part 1 (2-5 seconds)
+- Day 6, Part 2
+- Day 12, Part 2 (>10 seconds)
+- Day 13, Part 2 (>10 seconds)
+- Day 14, Part 2 (>10 seconds)
+- Day 15, Part 1 (>10 seconds)
+- Day 15, Part 2 (>10 seconds)
+- Day 16, Part 2 (2-5 seconds)
+- Day 17, Part 1 (>10 seconds)
+- Day 17, Part 2 (5-10 seconds)
+- Day 20, Part 1 (>10 seconds)
+- Day 20, Part 2 (2-5 seconds)
+- Day 22, Part 1 (2-5 seconds)
+- Day 22, Part 2 (>10 seconds)
+- Day 25, Part 1 (5-10 seconds)

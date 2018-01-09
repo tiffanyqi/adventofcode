@@ -28,6 +28,5 @@ for i in range(0, 40000000):
         total += 1
     a_start = a
     b_start = b
-    print i
 
 print total

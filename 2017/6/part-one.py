@@ -27,7 +27,6 @@ def redistribution():
             array[index] = array[index] + give
             remaining -= 1
 
-        print array
         for arr in arrays:
             if arr[:] == array:
                 return total
