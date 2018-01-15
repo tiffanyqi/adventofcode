@@ -1,44 +1,50 @@
+def calculate_distance(x, y, z):
+    return abs(x) + abs(y) + abs(z)
+
+
+class Particle:
+    """Particle class"""
+    def __init__(self, num, pos, vel, accel):
+        self.px = int(pos[0])
+        self.py = int(pos[1])
+        self.pz = int(pos[2])
+        self.vx = int(vel[0])
+        self.vy = int(vel[1])
+        self.vz = int(vel[2])
+        self.ax = int(accel[0])
+        self.ay = int(accel[1])
+        self.az = int(accel[2])
+        self.d = calculate_distance(int(pos[0]), int(pos[1]), int(pos[2]))
+        self.num = int(num)
+
 particles = []
 with open('input.txt') as inputfile:
+    num = 0
     for line in inputfile:
-        particles.append(line.strip().split('\n'))
+        particle = line.strip().split('\n')
+    items = particle[0].split(', ')
+    positions = items[0].strip().split('<')[1].split('>')[0].split(',')
+    velocities = items[1].strip().split('<')[1].split('>')[0].split(',')
+    accels = items[2].strip().split('<')[1].split('>')[0].split(',')
+    particles.append(Particle(num, positions, velocities, accels))
+    num += 1
 
-
-def create_dictionary(particles):
-    dictionary = {}
-    for i, particle in enumerate(particles):
-        items = particle[0].split(', ')
-        positions = items[0].strip().split('<')[1].split('>')[0].split(',')
-        dictionary[i] = {
-            'p': positions,
-            'v': items[1].strip().split('<')[1].split('>')[0].split(','),
-            'a': items[2].strip().split('<')[1].split('>')[0].split(','),
-            'd': calculate_distance(positions)
-        }
-
-    return dictionary
-
-
-def calculate_distance(positions):
-    return abs(int(positions[0])) + abs(int(positions[1])) + abs(int(positions[2]))
-
-
-dictionary = create_dictionary(particles)
-for iters in range(10000):
-    for particle in dictionary:
-        p = dictionary[particle]['p']
-        v = dictionary[particle]['v']
-        a = dictionary[particle]['a']
-        dictionary[particle]['v'] = [int(v[0])+int(a[0]), int(v[1])+int(a[1]), int(v[2])+int(a[2])]
-        dictionary[particle]['p'] = [int(p[0])+int(v[0]), int(p[1])+int(v[1]), int(p[2])+int(v[2])]
-        dictionary[particle]['d'] = calculate_distance(p)
+for iters in range(500):
+    for p in particles:
+        p.vx = p.vx + p.ax
+    p.vy = p.vy + p.ay
+    p.vz = p.vz + p.az
+    p.px = p.px + p.vx
+    p.py = p.py + p.vy
+    p.pz = p.pz + p.vz
+    p.d = calculate_distance(p.px, p.py, p.pz)
 
 closest_distance = 100000000
 closest_particle = 0
-for particle in dictionary:
-    distance = dictionary[particle]['d']
+for particle in particles:
+    distance = particle.d
     if abs(distance) < abs(closest_distance):
         closest_distance = distance
         closest_particle = particle
 
-print closest_particle
+print closest_particle.num
