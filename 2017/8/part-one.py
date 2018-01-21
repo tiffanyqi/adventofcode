@@ -55,4 +55,5 @@ for line in lines:
     items = line[0].strip().split(' ')
     processer(items[0], items[1], items[2], items[4], items[5], items[6])
 
-print max_value
+max_key = max(string_to_value.iteritems(), key=operator.itemgetter(1))[0]
+print string_to_value[max_key]

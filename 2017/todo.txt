@@ -1,9 +1,8 @@
 Stars obtained: 40
 Stars left to complete:
-- Code for Day 3, Part 1
+- Code for Day 3, Part 2
 - Code for Day 6, Part 1	
 - Day 7 *: Trees / Recursion
-- Code for Day 8, Part 1
 - Code for Day 10, Part 1
 - Day 11 *: Hex Distances
 - Code for Day 12, Part 1
