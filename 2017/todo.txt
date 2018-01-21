@@ -26,7 +26,6 @@ Runtime to do:
 - Day 16, Part 2 (2-5 seconds)
 - Day 17, Part 1 (>10 seconds)
 - Day 17, Part 2 (5-10 seconds)
-- Day 20, Part 2 (2-5 seconds)
 - Day 22, Part 1 (2-5 seconds)
 - Day 22, Part 2 (>10 seconds)
 - Day 25, Part 1 (5-10 seconds)

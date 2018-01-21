@@ -22,22 +22,22 @@ with open('input.txt') as inputfile:
     num = 0
     for line in inputfile:
         particle = line.strip().split('\n')
-    items = particle[0].split(', ')
-    positions = items[0].strip().split('<')[1].split('>')[0].split(',')
-    velocities = items[1].strip().split('<')[1].split('>')[0].split(',')
-    accels = items[2].strip().split('<')[1].split('>')[0].split(',')
-    particles.append(Particle(num, positions, velocities, accels))
-    num += 1
+        items = particle[0].split(', ')
+        positions = items[0].strip().split('<')[1].split('>')[0].split(',')
+        velocities = items[1].strip().split('<')[1].split('>')[0].split(',')
+        accels = items[2].strip().split('<')[1].split('>')[0].split(',')
+        particles.append(Particle(num, positions, velocities, accels))
+        num += 1
 
 for iters in range(500):
     for p in particles:
         p.vx = p.vx + p.ax
-    p.vy = p.vy + p.ay
-    p.vz = p.vz + p.az
-    p.px = p.px + p.vx
-    p.py = p.py + p.vy
-    p.pz = p.pz + p.vz
-    p.d = calculate_distance(p.px, p.py, p.pz)
+        p.vy = p.vy + p.ay
+        p.vz = p.vz + p.az
+        p.px = p.px + p.vx
+        p.py = p.py + p.vy
+        p.pz = p.pz + p.vz
+        p.d = calculate_distance(p.px, p.py, p.pz)
 
 closest_distance = 100000000
 closest_particle = 0
