@@ -10,16 +10,18 @@
 """
 input = 325489
 
+
 def get_northeast(steps):
     difference = 2
     count = 0
     start = 1
     while start < steps:
-    	start += difference
-	difference += 8
-	count += 1
+        start += difference
+    difference += 8
+    count += 1
     # current position, total northeasts
     return [start-difference+8, count]
+
 
 def get_northwest(steps):
     difference = 4
