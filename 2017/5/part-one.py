@@ -10,7 +10,7 @@ def jumps():
     while True:
         try:
             increment = array[start]
-            array[start] = increment + (-1 if increment > 2 else 1)
+            array[start] = increment + 1
             start = increment + start
             total += 1
 
